@@ -30864,6 +30864,20 @@ $as_echo "#define NETSNMP_CAN_USE_SYSCTL 1" >>confdefs.h
 fi
 
 
+ac_fn_c_check_decl "$LINENO" "IPFRAGTTL" "ac_cv_have_decl_IPFRAGTTL" "#include <sys/netinet/ip.h>
+"
+if test "x$ac_cv_have_decl_IPFRAGTTL" = xyes; then :
+  ac_have_decl=1
+else
+  ac_have_decl=0
+fi
+
+cat >>confdefs.h <<_ACEOF
+#define HAVE_DECL_IPFRAGTTL $ac_have_decl
+_ACEOF
+
+
+
 #   Check whether TCP timer constants are indeed constant
 #       or depend on the kernel clock tick 'hz'.        (FreeBSD)
 #

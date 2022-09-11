@@ -137,6 +137,10 @@
    don't. */
 #undef HAVE_DECL_DAYLIGHT
 
+/* Define to 1 if you have the declaration of `IPFRAGTTL', and to 0 if you
+   don't. */
+#undef HAVE_DECL_IPFRAGTTL
+
 /* Define to 1 if you have the declaration of `sensors_get_all_subfeatures',
    and to 0 if you don't. */
 #undef HAVE_DECL_SENSORS_GET_ALL_SUBFEATURES

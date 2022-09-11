@@ -212,6 +212,9 @@ if test "x$ac_cv_NETSNMP_CAN_USE_SYSCTL" = "xyes"; then
 fi
 
 
+AC_CHECK_DECLS([IPFRAGTTL], [], [], [[#include <sys/netinet/ip.h>]])
+
+
 #   Check whether TCP timer constants are indeed constant
 #       or depend on the kernel clock tick 'hz'.        (FreeBSD)
 #

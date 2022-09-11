@@ -455,7 +455,11 @@ ip_handler(netsnmp_mib_handler          *handler,
         netsnmp_set_request_error(reqinfo, request, SNMP_NOSUCHOBJECT);
         continue;
     case IPREASMTIMEOUT:
+#if HAVE_DECL_IPFRAGTTL
         ret_value = IPFRAGTTL;
+#else
+	ret_value = 0;
+#endif
         type = ASN_INTEGER;
         break;
     case IPREASMREQDS:
